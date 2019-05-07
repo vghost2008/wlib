@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+	<file>images/pick_up.png</file>
+	<file>images/pick_down.png</file>
+	<file>images/pixmaplabel_background.png</file>
+	<file>images/error.png</file>
+	<file>images/warning.png</file>
+	<file>images/debug.png</file>
+	<file>images/info.png</file>
+	<file>images/set.png</file>
+	<file>images/start.png</file>
+	<file>images/pause.png</file>
+	<file>images/apply.png</file>
+	<file>images/red.png</file>
+	<file>images/green.png</file>
+	<file>images/black.png</file>
+	<file>third_party/src/data/track</file>
+	<file>third_party/src/data/track_data/CONST</file>
+</qresource>
+</RCC>

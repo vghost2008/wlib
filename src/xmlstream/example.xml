@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigL id="0" name="系统设置" version="1">
+  <Group id="0" name="基本">
+    <Item id="0" name="系统语言(Language)" type="list" value="zh">
+      <ListValues>zh;;en;;</ListValues>
+    </Item>
+    <Item name="工作流程配置文件" type="dlist" value="flowconfig2">
+      <default_value>flowconfig</default_value>
+    </Item>
+  </Group>
+  <Group id="2" name="设备配置" reinit_id="false">
+    <Item id="2" name="设备类型" type="list" value="III型">
+      <ListValues>II型;;III型;;</ListValues>
+	  <Attr>readonly;hide;trans=(1,1)</Attr>
+    </Item>
+    <Item name="使用通道{}" type="bool" value="true" repeat="6"/>
+    <Item name="使用通道{2,1}" type="bool" value="true" repeat="6" repeat_id="2,1"/>
+	<Repeat value="4">
+    	<Item name="使用通道{}" type="bool" value="true"/>
+	</Repat>
+  </Group>
+  <Group id="3" name="GPS配置">
+    <Item id="201" name="GPS源" type="enum" value="GPS上报">
+      <ListValues>3:GPS上报;;4:预置;;</ListValues>
+      <Attr>margin=3;</Attr>
+    </Item>
+    <Item id="203" name="经度" type="double" value="109.7258390" min="-180.0000000" max="180.0000000">
+      <Attr>decimals=7;unit=度</Attr>
+    </Item>
+  <Group id="5" name="引导">
+    <Item id="300" name="引导插值" type="uint" value="10" min="1" max="100"/>
+  </Group>
+  <Group id="1" name="目录">
+    <Item id="4" name="工作目录" type="dir" value="/home/maxwell/infoproc">
+      <ItemDesc>系统工作文件存放主目录</ItemDesc>
+      <Attr>width=2;</Attr>
+      <default_value>~/infoproc</default_value>
+    </Item>
+    <Item id="8" name="原始文件保留最大天数" type="int" value="180" min="1" max="365">
+      <default_value>60</default_value>
+    </Item>
+    <Item id="9" name="监视文件保留最大天数" type="int" value="2" min="1" max="365">
+      <default_value>2</default_value>
+    </Item>
+  </Group>
+  <Group id="5" name="其它">
+    <Item id="25" name="字体大小" type="int" value="12" min="8" max="48">
+      <ItemDesc>重启应用程序后生效</ItemDesc>
+      <default_value>12</default_value>
+    </Item>
+    <Item id="26" name="地图文件" type="file" value="/home/maxwell/maps/World.wmap">
+      <ItemDesc>地图文件路径</ItemDesc>
+      <Attr>width=2;</Attr>
+      <default_value/>
+    </Item>
+  </Group>
+</ConfigL>
