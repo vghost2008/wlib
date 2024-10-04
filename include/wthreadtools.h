@@ -12,6 +12,7 @@ _Pragma("once")
 #include <functional>
 #include <chrono>
 #include <list>
+#include <vector>
 
 namespace std
 {

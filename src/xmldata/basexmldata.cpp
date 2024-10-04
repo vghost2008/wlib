@@ -113,9 +113,9 @@ unique_ptr<WAbstractXmlItemData> WAbstractXmlItemData::createDataByType(ItemType
 ItemType WAbstractXmlItemData::typeNameToType(const QString& name)
 {
 	call_once(type_name_init_falg,init_type_names);
-	auto it =  find(s_type_name_list.begin(),s_type_name_list.end(),name);
+	auto it =  std::find(s_type_name_list.begin(),s_type_name_list.end(),name);
 	if(s_type_name_list.end() == it) return IT_ERROR;
-	return static_cast<ItemType>(distance(s_type_name_list.begin(),it));
+	return static_cast<ItemType>(std::distance(s_type_name_list.begin(),it));
 }
 QString WAbstractXmlItemData::typeToTypeName(ItemType type)
 {

@@ -10,6 +10,7 @@ _Pragma("once")
 #include <QFontMetrics>
 #include <QFileInfo>
 #include <QDateTime>
+#include <functional>
 
 namespace WSpace
 {

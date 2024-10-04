@@ -359,7 +359,7 @@ void ColorItemDelegate::setModelData(WXmlItem* item,QWidget* editor,QAbstractIte
 bool ColorItemDelegate::paint(WXmlItem* item,QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
 	auto  data = item->getCoreData<WColorXmlItemData>();
-	if(nullptr == data) return nullptr;
+	if(nullptr == data) return false;
 	auto color = data->color();
 	painter->save();
 	painter->setBrush(color);

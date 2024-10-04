@@ -2,9 +2,9 @@
 
 #include "qtlocalpeer.h"
 
-#include <QtGui/QWidget>
+#include <QWidget>
 
-#include <QtGui/QFileOpenEvent>
+#include <QFileOpenEvent>
 
 void QtSingleApplication::sysInit(const QString &appId)
 

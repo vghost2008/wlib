@@ -2,6 +2,7 @@
 #include <toolkit.h>
 #include <QtCore>
 #include <QtGlobal>
+#include <functional>
 #include "wlogmacros.h"
 
 namespace WSpace

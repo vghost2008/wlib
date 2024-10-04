@@ -5,6 +5,7 @@ MOC_DIR = temp
 OBJECTS_DIR = temp
 TEMPLATE = lib
 CONFIG += debug
+QT += widgets
 WLIB_CONFIG = wgui log guilog  opengl wio singleapp
 #WLIB_CONFIG = wgui log guilog  databaselog opengl gis wio singleapp mapview perturbation
 #WLIB_CONFIG = wgui log guilog  databaselog opengl gis wio singleapp perturbation
@@ -13,6 +14,7 @@ WLIB_CONFIG = wgui log guilog  opengl wio singleapp
 unix{
 TARGET = ../release/wlib
 DEFINES += POSIX_API
+INCLUDEPATH += /usr/include/eigen3
 }
 
 QMAKE_CXXFLAGS += -std=c++11 -Wno-unused-local-typedefs -Wno-reorder -Wno-sign-compare -DBOOST_DATE_TIME_NO_LIB
