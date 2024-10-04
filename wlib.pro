@@ -5,7 +5,8 @@ MOC_DIR = temp
 OBJECTS_DIR = temp
 TEMPLATE = lib
 CONFIG += debug
-WLIB_CONFIG = wgui log guilog  databaselog opengl gis wio singleapp mapview perturbation
+WLIB_CONFIG = wgui log guilog  opengl wio singleapp
+#WLIB_CONFIG = wgui log guilog  databaselog opengl gis wio singleapp mapview perturbation
 #WLIB_CONFIG = wgui log guilog  databaselog opengl gis wio singleapp perturbation
 
 
