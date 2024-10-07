@@ -19,6 +19,7 @@ class WTCPClient:public QObject,public WAbstractSocket
 		virtual bool isValid()const override;
 		virtual int raw_write(const IOBuffer& data)override;
 		virtual int raw_read(IOBuffer* data)override;
+		inline QTcpSocket& socket() { return socket_;}
 	protected:
 		QTcpSocket     socket_;
 		friend class   Telecontrol;

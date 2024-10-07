@@ -15,6 +15,7 @@
 #include <iostream>
 #include <algorithm>
 #include <stdexcept>
+#include <toolkit.h>
 
 size_t WBuffer::s_init_head_room_ = 128u;
 
@@ -365,7 +366,7 @@ void WBuffer::dump(bool isassic)const
 	if(isassic) {
 		std::cout<<data();
 	} else {
-		//std::cout<<WSpace::toHexString(reinterpret_cast<unsigned char*>(data_),size_,8,4);
+		std::cout<<WSpace::toHexString(reinterpret_cast<const unsigned char*>(data()),size_,8,4);
 	}
 	std::cout<<"Dump wbuffer end";
 }

@@ -84,7 +84,9 @@ class WBuffer
 		 * 所申请的内在大小，包括head_room_
 		 */
 		inline size_t capacity()const { return capacity_;}
-
+		inline size_t head_room()const {
+			return head_room_;
+		}
 		inline char* data() { return data_+head_room_; }
 		inline const char* data()const { return data_+head_room_; }
 		inline char* begin(){return data();}
@@ -228,6 +230,18 @@ class WBuffer
 		inline void clear() { 
 			head_room_ = s_init_head_room_;
 			size_ = 0;
+		}
+		inline void clear_head_room(size_t new_head_room=WBuffer::s_init_head_room_) {
+			if(new_head_room>=head_room_)
+				return;
+			if(new_head_room>8192)
+				new_head_room = 8192;
+
+			auto pi = data();
+			auto po = data_+new_head_room;
+			for(auto i=0; i<size(); ++i)
+				po[i] = pi[i];
+			head_room_ = new_head_room;
 		}
 		/*
 		 * 设置数据长度，不对数据内容作修改
